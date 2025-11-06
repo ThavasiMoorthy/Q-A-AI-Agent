@@ -10,12 +10,9 @@ os.environ["OTEL_TRACES_EXPORTER"] = "none"
 os.environ["OTEL_LOGS_EXPORTER"] = "none"
 
 """
-rag_agent_llama_streamlit.py
-Author: [Your Name]
-Description: Fully local LangGraph + RAG Agent using Llama 3.1 (via Ollama)
-with Streamlit UI, TruLens trace logging, and BLEU/ROUGE/BERTScore evaluation.
+🧠 AI-Powered RAG Agent using LangGraph + Llama 3.1
 """
-
+    
 # ===============================
 # Imports
 # ===============================
