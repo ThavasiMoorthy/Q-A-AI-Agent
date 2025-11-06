@@ -1,4 +1,4 @@
-🧠 AI-Powered RAG Agent using LangGraph + Llama 3.1
+AI-Powered RAG Agent using LangGraph + Llama 3.1
 
 A fully local Retrieval-Augmented Generation (RAG) pipeline built using LangGraph, Ollama (Llama 3.1), and Streamlit, enhanced with TruLens trace logging and automatic evaluation (BLEU, ROUGE, and BERTScore).
 
@@ -20,7 +20,7 @@ It leverages:
 
 🌐 Streamlit UI – for an interactive Q&A interface.
 
-⚙️ System Architecture
+
 User Query
    │
    ▼
@@ -47,6 +47,7 @@ HuggingFace Embeddings	Creates embeddings (all-MiniLM-L6-v2) for semantic search
 TruLens	Logs LLM calls, tracks metrics, and evaluates quality of RAG responses.
 BLEU / ROUGE / BERTScore	Evaluates similarity between generated and reference answers.
 Streamlit	Provides an interactive UI for querying the model.
+
 🧰 Installation & Setup
 1️⃣ Clone the Repository
 git clone https://github.com/yourusername/langgraph-llama-rag.git
@@ -114,27 +115,7 @@ Metric	Score
 BLEU	0.92
 ROUGE-L	0.88
 BERTScore (F1)	0.95
-🧠 Approach Summary
-Step	Description
-1. Data Loading	Extract text from the PDF using PyPDFLoader.
-2. Chunking	Split large text into smaller 1000-character segments for efficient retrieval.
-3. Embedding	Convert each chunk into vector embeddings using all-MiniLM-L6-v2.
-4. Vector Store	Store embeddings in Chroma for fast semantic search.
-5. Query Flow (LangGraph)	Process: plan → retrieve → answer → reflect.
-6. LLM (Ollama Llama 3.1)	Answer generation and reflection.
-7. Evaluation	BLEU, ROUGE, and BERTScore computed using evaluate library.
-8. Logging (TruLens)	Logs LLM calls and evaluation traces for transparency.
-🧩 Evaluation Framework
 
-Three automated metrics evaluate the generated answers:
-
-BLEU → Measures n-gram overlap with a reference answer.
-
-ROUGE-L → Measures longest common subsequence between prediction and reference.
-
-BERTScore → Measures semantic similarity using contextual embeddings.
-
-All metrics are computed after each run for performance monitoring.
 
 📊 TruLens Logging and Dashboard
 
